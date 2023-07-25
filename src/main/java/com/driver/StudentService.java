@@ -7,15 +7,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class StudentService {
-    @Autowired
-    StudentRepository studentRepository;
 
-    public Student addStudent(Student student) {
-        return studentRepository.addStudent(student);
+    StudentRepository studentRepository=new StudentRepository();
+
+    public void addStudent(Student student) {
+         studentRepository.addStudent(student);
     }
 
-    public Teacher addTeacher(Teacher teacher) {
-        return studentRepository.addTeacher(teacher);
+    public void addTeacher(Teacher teacher) {
+         studentRepository.addTeacher(teacher);
     }
 
     public void addStudentTeacherPair(String student, String teacher) {
