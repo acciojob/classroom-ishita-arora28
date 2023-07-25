@@ -1,24 +1,24 @@
 package com.driver;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import org.springframework.stereotype.Service;
-
-@Service
 public class StudentService {
+    private StudentRepository studentRepository = new StudentRepository();
 
-    StudentRepository studentRepository=new StudentRepository();
 
     public void addStudent(Student student) {
-         studentRepository.addStudent(student);
+        studentRepository.add(student);
     }
 
     public void addTeacher(Teacher teacher) {
-         studentRepository.addTeacher(teacher);
+        studentRepository.addTeacher(teacher);
     }
 
     public void addStudentTeacherPair(String student, String teacher) {
-        studentRepository.addStudentTeacherPair(student,teacher);
+        studentRepository.addStudentTeacherPair(student, teacher);
     }
 
     public Student getStudentByName(String name) {
