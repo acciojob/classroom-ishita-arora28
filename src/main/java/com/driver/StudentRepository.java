@@ -1,6 +1,6 @@
 package com.driver;
 
-import java.sql.Array;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,11 +39,17 @@ public class StudentRepository {
     }
 
     public Student getStudentByName(String name) {
-        return studentMap.get(name);
+        Student getStudent=new Student();
+        if(studentMap.containsKey(name))
+            getStudent=studentMap.get(name);
+        return getStudent;
     }
 
     public Teacher getTeacherByName(String name) {
-        return teacherMap.get(name);
+        Teacher getTeacher=new Teacher();
+        if(teacherMap.containsKey(name))
+            getTeacher=teacherMap.get(name);
+        return getTeacher;
     }
 
     public List<String> getStudentsByTeacherName(String teacher) {
