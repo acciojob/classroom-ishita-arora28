@@ -15,12 +15,12 @@ public class StudentRepository {
     Map<String,Teacher> teacherMap=new HashMap<>();
     Map<String,List<String>> studentTeacherMap=new HashMap<>();
     
-    public Student addStudent(Student student) {
-        return studentMap.put(student.getName(),student);
+    public void addStudent(Student student) {
+         studentMap.put(student.getName(),student);
     }
 
-    public Teacher addTeacher(Teacher teacher) {
-        return teacherMap.put(teacher.getName(), teacher);
+    public void addTeacher(Teacher teacher) {
+         teacherMap.put(teacher.getName(), teacher);
     }
 
     public void addStudentTeacherPair(String student, String teacher) {
